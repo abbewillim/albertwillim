@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Albert</title>
+
+  <style>
+      .container {
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        height: 100vh;
+        padding-left: 15px;
+      }
+      .menu {
+        display: flex;
+        flex-direction: column;
+        margin-top: 20px;
+        font-family: 'Times New Roman', Times, serif;
+      }
+      .menu a {
+        text-decoration: none;
+        color: black;
+        margin-bottom: 15px;
+        font-family: 'Times New Roman', Times, serif;
+      }
+      .title {
+        text-align: left;
+        font-size: 22px;
+        font-family: 'Times New Roman', Times, serif;
+      }  
+
+  .menu a:hover {
+    font-size:xx-large;
+    font-weight: lighter;
+    cursor: pointer;
+    text-decoration: underline;
+   }
+
+        /*obachulle kollar mobil*/
+        @media only screen and (max-width: 900px) {
+        .title {
+          font-size: 20px;
+        }
+        .menu a {
+          font-size: 27px;
+        }
+      }
+
+        /*obachulle kollar dator*/
+        @media only screen and (min-width: 900px) {
+        .title {
+          font-size: 25x;
+        }
+        .menu a {
+          font-size: 30px;
+        }
+    </style>
+
+  </head>
+  <body>
+    <div class="container">
+      <div class="title">
+        <h1 >A_____ Will__</h1>
+      
+      </div>
+      <div class="menu">
+        <a href="http://127.0.0.1:5500/text/text.html">text</a>
+        <a href="http://127.0.0.1:5500/projekt/projekt.html">projekt</a>
+        <a href="http://127.0.0.1:5500/info/info.html">info</a>
+        <a href="http://127.0.0.1:5500/kontakt/kontakt.html">kontakt</a>
+      </div>
+    </div>
+  </body>
+</html>

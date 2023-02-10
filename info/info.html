@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+<title>info</title>
+    <div class="header">
+      <a href="http://127.0.0.1:5500/index.html" class="header-title">Tillbaka</a>
+    </div>
+    
+    <style>
+      .header {
+        display: flex;
+        justify-content: flex-start;
+        padding-right: 15px;
+      }
+    
+      .header-title {
+        text-decoration: none;
+        color: black;
+        font-size: 20px;
+      }
+    </style>
+    
+
+    <style>
+
+        #content {
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          height: 100%;
+          text-align: left;
+          font-family: "Times New Roman", Times, serif;
+          text-indent: 50px;
+          width: 50%;
+          margin: 0 auto;
+        }
+        @media (min-width: 900px) {
+          #content {
+            font-size: 24px;
+            width: 80%;
+          }
+        }
+        @media (max-width: 900px) {
+          #content {
+            font-size: 19px;
+            width: 90%;
+          }
+        }
+       
+
+      </style>
+          
+  </head>
+  <body>
+    <p id="content"></p>
+    <script>
+        var xhr = new XMLHttpRequest();
+        xhr.open("GET", "info.txt", true);
+        xhr.onreadystatechange = function() {
+          if (xhr.readyState === 4 && xhr.status === 200) {
+            var text = xhr.responseText.replace(/\n/g, "<br>");
+            document.getElementById("content").innerHTML = text;
+          }
+        };
+        xhr.send();
+      </script>     
+       
+  </body>
+</html>
