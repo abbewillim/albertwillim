@@ -52,16 +52,17 @@
   <body>
     <p id="content"></p>
     <script>
-        var xhr = new XMLHttpRequest();
-        xhr.open("GET", "text.txt", true);
-        xhr.onreadystatechange = function() {
-          if (xhr.readyState === 4 && xhr.status === 200) {
-            var text = xhr.responseText.replace(/\n/g, "<br>");
-            document.getElementById("content").innerHTML = text;
-          }
-        };
-        xhr.send();
-      </script>     
+  var xhr = new XMLHttpRequest();
+  xhr.open("GET", "text.txt", true);
+  xhr.onreadystatechange = function() {
+    if (xhr.readyState === 4 && xhr.status === 200) {
+      var text = xhr.responseText.replace(/\n/g, "<br>").replace(/ /g, "&nbsp;");
+      document.getElementById("content").innerHTML = text;
+    }
+  };
+  xhr.send();
+</script>
+  
        
   </body>
 </html>
