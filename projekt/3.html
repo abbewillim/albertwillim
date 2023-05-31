@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Vresros</title>
+</head>
+<body>
+    <div class="header">
+        <a href="projekt/artefakter.html" class="header-title">Tillbaka</a>
+      </div>
+      
+      <style>
+        .header {
+          display: flex;
+          justify-content: flex-start;
+          padding-right: 15px;
+          padding-bottom: 10px;
+        }
+      
+        .header-title {
+          text-decoration: none;
+          color: black;
+          font-size: 20px;
+        }
+      </style>
+
+  <h1>Vresros</h1>
+  <style>
+    h1 {
+        font-family: 'Times New Roman', Times, serif;
+        font-size: xx-large;
+        font-weight: lighter;
+    }
+  </style>
+
+  <img src="projekt/3.jpg" alt="3">
+  <style>
+    img {
+      max-width: 100%;
+      height: auto;
+    }
+
+    @media (max-width: 600px) {
+      img {
+        max-width: 100%;
+        height: auto;
+      }
+    }
+
+    @media (min-width: 601px) and (max-width: 1200px) {
+      img {
+        max-width: 50%;
+        height: auto;
+      }
+    }
+
+    @media (min-width: 1201px) {
+      img {
+        max-width: 30%;
+        height: auto;
+      }
+    }
+  </style>
+  <p>Vresros, 2023. Glazed clay
+  </p>
+  <style>
+    p {
+        font-family: 'Times New Roman', Times, serif;
+        font-size: small;
+    }
+  </style>
+  <img src="projekt/3två.jpg" alt="3två">
+
+
+   <!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-PKJPDLH7C6"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-PKJPDLH7C6');
+</script>
+          
+  </head>
+  <body>
+    <p id="content"></p>
+    <script>
+        var xhr = new XMLHttpRequest();
+        xhr.open("GET", "info.txt", true);
+        xhr.onreadystatechange = function() {
+          if (xhr.readyState === 4 && xhr.status === 200) {
+            var text = xhr.responseText.replace(/\n/g, "<br>");
+            document.getElementById("content").innerHTML = text;
+          }
+        };
+        xhr.send();
+      </script>     
+
+</body>
+</html>
