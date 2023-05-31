@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="Albert Willim. text. projekt. info. kontakt.">
+    <meta name="keywords" content="Albert Willim, Willim, Albert, Abbe Willim, Abbe, Willim">
+    <title>Artefakter</title>
+    <link rel="icon" type="image/x-icon" href="favicon.ico">
+  <style>
+    body {
+      margin: 0;
+      padding: 30px; /* Add padding to create a gap around the grid */
+      font-family: 'Times New Roman', Times, serif;
+    }
+
+
+    
+    .grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(200px, 200px));
+      grid-gap: 20px;
+    }
+    
+    .grid-item {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+    
+    .grid-item img {
+      max-width: 100%;
+      max-height: 100%;
+      object-fit: contain;
+    }
+
+    
+    @media (max-width: 600px) {
+      .grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+  </style>
+</head>
+
+<body>
+
+    <div class="header">
+      <a href="https://abbewillim.github.io/albertwillim/" class="header-title">Tillbaka</a>
+    </div>
+    
+    <style>
+      .header {
+        display: flex;
+        justify-content: flex-start;
+        padding-right: 15px;
+        padding-bottom: 15px;
+      }
+    
+      .header-title {
+        text-decoration: none;
+        color: black;
+        font-size: 20px;
+      }
+    </style>
+
+
+  <div class="grid">
+    <a href="https://example.com/page1" class="grid-item">
+        <img src="artefakt-foton/1.jpg"></a>
+    <a href="https://example.com/page1" class="grid-item">
+        <img src="artefakt-foton/2.jpg"></a>
+    <a href="https://example.com/page1" class="grid-item">
+        <img src="artefakt-foton/3.jpg"></a>
+    <a href="https://example.com/page1" class="grid-item">
+        <img src="artefakt-foton/4.jpg"></a>
+    <a href="https://example.com/page1" class="grid-item">
+        <img src="artefakt-foton/5.jpg"> </a>
+        </div>
+
+  <script>
+    // Randomize the size of each grid item
+    const gridItems = document.querySelectorAll('.grid-item');
+    
+    gridItems.forEach(item => {
+      const randomSize = Math.floor(Math.random() * 2) + 1; // Generate a random number between 1 and 3
+      item.style.gridColumnEnd = `span ${randomSize}`;
+      item.style.gridRowEnd = `span ${randomSize}`;
+    });
+  </script>
+
+
+
+  <!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-PKJPDLH7C6"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-PKJPDLH7C6');
+</script>
+          
+  </head>
+  <body>
+    <p id="content"></p>
+    <script>
+        var xhr = new XMLHttpRequest();
+        xhr.open("GET", "info.txt", true);
+        xhr.onreadystatechange = function() {
+          if (xhr.readyState === 4 && xhr.status === 200) {
+            var text = xhr.responseText.replace(/\n/g, "<br>");
+            document.getElementById("content").innerHTML = text;
+          }
+        };
+        xhr.send();
+      </script>     
+
+      
+</body>
+</html>
